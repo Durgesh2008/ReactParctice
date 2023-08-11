@@ -4,13 +4,15 @@ import './App.css';
 
 import React from 'react'
 import MultilevelDropdown from './component/MultilevelDropdown';
+import Table from './component/DisplayData/Table';
 
 
 const App = () => {
   return (
-    <div className='m-auto w-full bg-slate-500 h-[100vh]'>
+    <div className='m-auto w-full h-[100vh]'>
      {/* <Apifetching/> */}
-  <MultilevelDropdown/>
+  {/* <MultilevelDropdown/> */}
+  <Table/>
    
     </div>
   )

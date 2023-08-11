@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Dropdown from './Dropdown'
 
 
 const MultilevelDropdown = () => {
+  const [Isselect,setisselect]=useState(false)
+ 
+ 
   const data=[
     {
       label: "Menu 1",
@@ -25,10 +28,13 @@ const MultilevelDropdown = () => {
       submenu: [{ label: "Sub Menu 1" }, { label: "Sub Menu 2" }],
     },
   ];
+  const handle=(e)=>{
+console.log(e.target)
+  }
   return (
-    <div className='w-[500px] m-auto flex flex-col'>
+    <div onClick={handle} className='w-[500px] m-auto flex flex-col'>
       {data.map((ele,j)=>{
-       return (<Dropdown key={`hell${j}`} name={ele.label} submenu={ele.submenu} />)
+       return (<Dropdown  key={`hell${j}`} name={ele.label} submenu={ele.submenu} />)
       })}
     
      

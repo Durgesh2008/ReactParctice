@@ -4,7 +4,7 @@ const Dropdown = ({submenu,name}) => {
   const [isclick,setisclick]=useState(true);
 const handleDropdown=()=>{
   
- isclick? setisclick(false):setisclick(true);
+  setisclick(!isclick)
 }
   return (
    <>
