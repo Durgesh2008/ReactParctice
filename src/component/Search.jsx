@@ -15,15 +15,12 @@ const Search = () => {
       ];
     const [SearchTerm,setSerachTerm]=useState("");
     const [searchRes,setsearchRes]=useState([]);
+ 
   useEffect(()=>{
-    setsearchRes(people)
-  },[])
-  useEffect(()=>{
-  if(searchRes.includes(SearchTerm))
-    setsearchRes([SearchTerm])
- else{
-    setsearchRes(people)
- }
+  const result=people.filter((person)=>{
+   return  person.toLowerCase().includes(SearchTerm.toLowerCase())
+  })
+  setsearchRes(result);
   },[SearchTerm])
   return (
     <>
