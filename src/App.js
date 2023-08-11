@@ -5,6 +5,7 @@ import './App.css';
 import React from 'react'
 import MultilevelDropdown from './component/MultilevelDropdown';
 import Table from './component/DisplayData/Table';
+import AddTwoNumber from './component/AddTwoNumber';
 
 
 const App = () => {
@@ -12,8 +13,8 @@ const App = () => {
     <div className='m-auto w-full h-[100vh]'>
      {/* <Apifetching/> */}
   {/* <MultilevelDropdown/> */}
-  <Table/>
-   
+  {/* <Table/> */}
+   <AddTwoNumber/>
     </div>
   )
 }
