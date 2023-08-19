@@ -17,10 +17,15 @@ const Search = () => {
     const [searchRes,setsearchRes]=useState([]);
  
   useEffect(()=>{
-  const result=people.filter((person)=>{
-   return  person.toLowerCase().includes(SearchTerm.toLowerCase())
-  })
-  setsearchRes(result);
+ 
+    const timer=setTimeout(() => {
+      const result=people.filter((person)=>{
+        setSerachTerm(SearchTerm.trim());
+        return  person.toLowerCase().includes(SearchTerm.toLowerCase())
+       })
+       setsearchRes(result);
+    }, 500);
+    return () => clearTimeout(timer);
   },[SearchTerm])
   return (
     <>
